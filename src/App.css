@@ -1,0 +1,49 @@
+.DataContainer{
+  justify-content: center;
+  background-color:rgb(255, 255, 255);
+}
+.Data{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  background-color:rgb(255, 255, 255);
+  justify-content: center;
+  width: 100%;
+}
+
+.player{
+  background-color: #1acdff;
+  color:rgb(0, 0, 0);
+  border: solid black;
+  border-radius: 10px;
+  margin: 5px;
+  overflow: hidden;
+  width: 300px;
+  height: 250px;
+
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  
+}
+.player>*{
+  margin: 5px;
+}
+.player>img{ width: 100px ;height: 100px; border: solid black ;}
+
+.player:hover{
+  background-color:cadetblue;
+  box-shadow:2em;
+  width: 350px;
+  height: 300px;
+}
+
+
+.Nav{
+  height: 50px;
+  border: solid 2px;
+  background-color:cadetblue;
+  display: flex;
+  justify-content: space-around;
+
+}
