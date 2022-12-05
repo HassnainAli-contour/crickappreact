@@ -1,20 +1,27 @@
 import React from "react"; 
 import { Link } from "react-router-dom";
+import { add,store,remove } from "./CartRedux";
 
-export default function Player(props){
+
+export default function CartItemCard(props){
     
 
-    console.log(props.obj)
+   
     return(
 
-        <div  className="player" onClick={()=>{}}>
+        <div  className="item" >
             <img src={props.obj.image} alt={props.obj.title}/>
             <h4  style={{"width":"50%"}}>
                 {props.obj.title}
             </h4>
             <p>
                 <div style={{"justifyContent":"center","marginBottom":"-20px"}}>
-                    {props.obj.price} <button >{" Add to Cart "}</button> <Link to={'/items/'+props.obj.id}>details...</Link>
+                    $ {props.obj.price} 
+                    <button onClick={()=>{ 
+                             store.dispatch(   {type:"REMOVE",obj:props.obj}  )}}>
+                                {" Remove Cart "}   
+                    </button> 
+                
                 </div>
                 <br/>
                 {props.obj.description}
